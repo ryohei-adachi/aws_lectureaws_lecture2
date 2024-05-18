@@ -10,7 +10,7 @@ export const TaskList = ({tasks,onDelete, onUpdate}) => {
                     <Task
                         key={task.id}
                         id={task.id}
-                        content={task.content}
+                        taskName={task.taskName}
                         onUpdate={onUpdate}
                         onDelete={onDelete}
                     />

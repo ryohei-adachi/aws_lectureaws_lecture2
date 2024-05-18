@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { Button  } from "./Button";
 
 export const TaskForm = ({onSave}) => {
-    const [content, setContent] = useState("");
+    const [taskName, setTaskName] = useState("");
 
-    const handleChangeContent = (e) => {
-        console.log("handleChangeContent called");
-        setContent(e.target.value);
+    const handleChangeTaskName = (e) => {
+        console.log("handleChangeTaskName called");
+        setTaskName(e.target.value);
     };
 
     const handleSave = () => {
         console.log("handle Save called");
-        onSave(content);
+        onSave(taskName);
         //登録ボタン押下後、入力した内容が消えるようにする
-        setContent("");
+        setTaskName("");
     };
 
     return (
@@ -22,8 +22,8 @@ export const TaskForm = ({onSave}) => {
                 <input
                     type="text"
                     className={"tack_input"}
-                    onChange={handleChangeContent}
-                    value={content}
+                    onChange={handleChangeTaskName}
+                    value={taskName}
                 />
                 <Button
                     text={"登録"}

@@ -3,35 +3,89 @@ import axios from "axios";
 import { TaskList } from "./components/TaskList";
 import { TaskForm } from "./components/TastForm";
 
+
 const App = () =>{
 
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(0);
   const [tasks, setTasks] = useState([]);
 
   useEffect(()=>{
 
-  });
+    axios
+    .get("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task-list")
+    .then((response)=>{
+        //タスク情報を取得
+        
+        const responseTasks = response.data.tasks;
+        let initTasks=[];
+        
+        responseTasks.map((responseTask) => {
+
+          const initTask = {
+            id: responseTask.id,
+            taskName: responseTask.taskName
+          };
+          initTasks = initTasks.concat(initTask);
+          console.log(initTasks);
+
+        })
+        setTasks(initTasks);
+
+        let initId = responseTasks.length;
+        setId(initId + 1);
+
+        
+    })
+    .catch((error)=>{
+        //エラー
+        console.log(error);
+    })
+
+  },[]);
   
 
-  const onSave = (content) =>{
+  //登録ボタンを押下時のイベント
+  const onSave = (taskName) =>{
     const newTask = {
       id: id,
-      content: content
+      taskName: taskName
     };
-    setId(id + 1);
-    const newTasks = tasks.concat(newTask)
-    setTasks(newTasks);
+
+    //POST通信でDynamoDBにタスク情報を登録する
+    axios.post("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task",newTask)
+    .then((response)=>{
+      console.log(response);
+
+      //フロント側でも追加したタスクを表示する
+      setId(id + 1);
+      const newTasks = tasks.concat(newTask)
+      setTasks(newTasks);
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
 
   };
 
   const onDelete = (id) => {
-    const filteredTasks = tasks.filter((task) => task.id !== id);
-    setTasks(filteredTasks);
+    axios
+    .delete("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task/" + id)
+    .then((response)=>{
+      
+      //フロント側では、削除したID以外のタスクをリストとして再作成して、再セットする。
+      const filteredTasks = tasks.filter((task) => task.id !== id);
+      setTasks(filteredTasks);
+
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+
   };
 
-  const onUpdate = (id, content) => {
+  const onUpdate = (id, taskName) => {
     const newTasks = tasks.map((task)=>
-      task.id === id ? { id:id, content:content } : task
+      task.id === id ? { id:id, taskName:taskName } : task
     );
     setTasks(newTasks);
   }

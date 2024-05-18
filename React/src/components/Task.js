@@ -2,29 +2,29 @@ import React, { useState } from "react";
 import { Button } from "./Button";
 import styles from "../css/Layout.module.css";
 
-export const Task = ({content, id, onDelete, onUpdate}) => {
+export const Task = ({taskName, id, onDelete, onUpdate}) => {
     //対象のタスクが編集中か否かの状態を管理
     const [isEditing, setEditing] = useState(false); 
 
-    const [editingContent, setEditingContent] = useState("");
+    const [editingTaskName, setEditingTaskName] = useState("");
 
-    const handleChangeContent= (e) => {
-        setEditingContent(e.target.value);
+    const handleChangeTaskName= (e) => {
+        setEditingTaskName(e.target.value);
     };
 
     const handleClickCancel = () => {
-        setEditingContent(content);
+        setEditingTaskName(taskName);
         setEditing(false);
     };
 
     const handleClickUpdate = () => {
-        onUpdate(id, editingContent);
+        onUpdate(id, editingTaskName);
         setEditing(false);
     };
 
     const handleClickEdit = () => {
         //編集前のタスク名をテキストボックスに表示させておく
-        setEditingContent(content);
+        setEditingTaskName(taskName);
         setEditing(true);
     };
 
@@ -61,12 +61,12 @@ export const Task = ({content, id, onDelete, onUpdate}) => {
                 <input
                     Name={"task_input"}
                     type="text"
-                    value={editingContent}
-                    onChange={handleChangeContent}
+                    value={editingTaskName}
+                    onChange={handleChangeTaskName}
                 />
                 
             ):(
-                <p className={"task_p"}>{content}</p>
+                <p className={"task_p"}>{taskName}</p>
             )}
         </div>
     )
