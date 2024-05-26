@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import { TaskList } from "./components/TaskList";
 import { TaskForm } from "./components/TastForm";
-
+import config from './config'; 
 
 const App = () =>{
 
@@ -12,7 +12,7 @@ const App = () =>{
   useEffect(()=>{
 
       axios
-      .get("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task-list")
+      .get(config.GET_API_URL)
       .then((response)=>{
             //タスク情報を取得
         
@@ -51,7 +51,7 @@ const App = () =>{
       };
 
       //登録用のAPIを呼び出し
-      axios.post("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task",newTask)
+      axios.post(config.POST_API_URL, newTask)
       .then((response)=>{
           console.log(response);
 
@@ -69,7 +69,7 @@ const App = () =>{
   const onDelete = (id) => {
       //削除用のAPIを呼び出し
       axios
-      .delete("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task/" + id)
+      .delete(config.DELETE_API_URL + id)
       .then((response)=>{
       
           //フロント側では、削除したID以外のタスクをリストとして再作成して、再セットする。
@@ -91,7 +91,7 @@ const App = () =>{
 
       //更新用のAPIを呼び出し
       axios
-      .put("https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task",updateTask)
+      .put(config.PUT_API_URL,updateTask)
       .then((response)=>{
 
           //更新対象のタスクを更新して、リストを作り直す
