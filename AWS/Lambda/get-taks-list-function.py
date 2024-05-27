@@ -48,6 +48,19 @@ def lambda_handler(event, context):
                 "tasks": tasks,
                 }),
             }
+
+        else:
+            return {
+                "statusCode": 200,
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": '*',
+                    "Access-Control-Allow-Methods": "GET"
+                    },
+                "body": json.dumps({
+                "tasks": None,
+                }),
+            }
         
 
     #例外エラー発生
