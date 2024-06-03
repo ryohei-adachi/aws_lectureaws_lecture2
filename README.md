@@ -34,7 +34,9 @@
 | put-task-function | 指定したTODOタスクの内容を変更する | Python 3.8 |
 | delete-task-function | 指定したTODOタスクをDynamoDBから削除する | Python 3.8 |
 
-[関数の作成の仕方] 
+<br>
+
+## 【関数の作成の仕方】
 
 <br>
 
@@ -54,3 +56,18 @@
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0a5d283a-bbb1-4884-9105-35ba3778b90c" width="70%" />
 
+<br>
+
+上記手順で、関数4つ分作成する。
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/36209267-d737-4161-aa29-a1ff90b69f44" width="70%" />
+
+<br>
+
+## 【Lambdaコードの書き換え】
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/03c5f414-7da1-4ad4-8063-4d4cf71e3f62" width="70%" />
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/3480bfdb-c7bd-4da4-abeb-327e4323104b" width="70%" />
