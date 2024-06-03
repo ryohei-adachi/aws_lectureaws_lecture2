@@ -19,7 +19,7 @@
 
 + マネジメントコンソールの検索部分に「Lambda」と入力・検索を行い、Lambdaサービスを選択する。
 
-<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/426fbdc6-3635-44e3-a1a9-1eafbc9c4c90" width="70%" />
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e92292e4-3083-4644-9ee1-b67a9c9c6e59" width="70%" />
 
 <br><br>
 
