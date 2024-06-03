@@ -24,6 +24,9 @@
 <br><br>
 
 + 下記の関数を作成する
+
+<br>
+  
 | 関数名 | 役割 | ランタイム設定 | 
 | ---- | ---- | ---- | 
 | get-task-list-function |  TODOタスク一覧をDynamoDBから取得する | Python 3.8 |
