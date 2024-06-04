@@ -71,3 +71,9 @@
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/03c5f414-7da1-4ad4-8063-4d4cf71e3f62" width="70%" />
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/3480bfdb-c7bd-4da4-abeb-327e4323104b" width="70%" />
+
++ 本GitHubプロジェクトに置いてある「AWS/Lambda」フォルダのPythonコードに書き換える 
+    + get-task-list-function関数の場合、「AWS/Lambda/get-task-list-function.py」の内容に書き換える
+    + post-task-function関数の場合、「AWS/Lambda/post-task-function.py」の内容に書き換える
+    + put-task-function関数の場合、「AWS/Lambda/put-task-function.py」の内容に書き換える
+    + delete-task-function関数の場合、「AWS/Lambda/delete-task-function.py」の内容に書き換える
