@@ -95,9 +95,11 @@
 + コードの保存をする
     + 「File」 ⇒ 「Save」を選択する
 
+<br>
+
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/a74610ab-c17c-4192-a3ae-c2784120e777" width="70%" />
 
-<br>
+<br><br>
 
 ・デプロイを行う
     + 「Deploy」ボタンを押す
