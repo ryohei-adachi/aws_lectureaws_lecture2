@@ -15,6 +15,14 @@
 
 <br><br>
 
++ 本GitHubプロジェクトファイル一式をダウンロードする
+    + 「<>Code」⇒ 「Download Zip」ボタンをクリックするとダウンロードできる
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fa12faa6-b5ae-499d-b383-d3c61c8e392a" width="70%" />
+
+
 # ② AWS Lambdaの作成
 
 + マネジメントコンソールの検索部分に「Lambda」と入力・検索を行い、Lambdaサービスを選択する。
@@ -77,3 +85,23 @@
     + post-task-function関数の場合、「AWS/Lambda/post-task-function.py」の内容に書き換える
     + put-task-function関数の場合、「AWS/Lambda/put-task-function.py」の内容に書き換える
     + delete-task-function関数の場合、「AWS/Lambda/delete-task-function.py」の内容に書き換える
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/83a4538a-7e0a-44aa-a41e-96b64b39ea10" width="70%" />
+
+<br><br>
+
++ コードの保存をする
+    + 「File」 ⇒ 「Save」を選択する
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/a74610ab-c17c-4192-a3ae-c2784120e777" width="70%" />
+
+<br>
+
+・デプロイを行う
+    + 「Deploy」ボタンを押す
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/98630b9a-b645-4714-9939-a70adc69e8ca" width="70%" />
