@@ -92,7 +92,7 @@
 
 <br><br>
 
-+ コードの保存をする
++ コードの書き換え後、コードの保存をする
     + 「File」 ⇒ 「Save」を選択する
 
 <br>
@@ -107,3 +107,12 @@
 <br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/98630b9a-b645-4714-9939-a70adc69e8ca" width="70%" />
+
+<br><br>
+
++ IAMの設定
+
+<br>
+
+Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込みを行う。
+そのため、Lambdaに対して、DynamoDBへのアクセス権限を付与する。
