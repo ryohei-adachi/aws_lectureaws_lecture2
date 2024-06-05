@@ -101,7 +101,7 @@
 
 <br><br>
 
-・デプロイを行う
++ デプロイを行う
     + 「Deploy」ボタンを押す
 
 <br>
@@ -117,3 +117,43 @@
 Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込みを行う。
 
 そのため、Lambdaに対して、DynamoDBへのアクセス権限を付与する。
+
+<br>
+
++ Lambdaの「設定」タブ > 「一般設定」 > 「編集」ボタンをクリックする
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/44012845-0ff9-468b-9615-09cc57a78770" width="70%" />
+
+<br>
+
++ 基本設定の下部にある「IAM コンソールでxxxxxxx-function-role-xxxxxx ロールを表示」のリンクをクリックする
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/1cdb89f6-8d74-4c4e-b129-486031faab7b" width="70%" />
+
+<br>
+
++ IAMサービスを開くと、許可ポリシーの「許可追加」 > 「ポリシーをアタッチ」を選択
+    + xxxxxxx-function-role-xxxxxxロールに対して、ポリシーを追加する
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e258a13b-c3c4-460f-bde4-77ee53c51f78" width="70%" />
+
+<br>
+
++ その他の許可ポリシー に「DynamoDB」と検索して、「AmazonDynamoDBFullAccess」にチェックを入れて、「許可を追加」を選択
+    + 本来では関数ごとに適切な権限を設定する必要がある。
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/da2acebc-d053-491f-82f3-1e0335d0f937" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/ec56780f-3dac-4530-b8d4-7a589bc9ea8e" width="70%" />
+
+<br>
