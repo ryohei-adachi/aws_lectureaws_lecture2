@@ -192,3 +192,107 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 <br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/cca1419f-889f-4f35-8fea-c6d99ce85514" width="70%" />
+
+<br><br>
+ここから、リソースパス、メソッドを作成していく。
+<br>
+
+▼完成した形
+<br>
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6da1ccd3-7db7-4e0e-afba-a944458209a6" width="70%" />
+
+<br>
+
+
+## 【リソースの作成】
+
+<br>
+
+下記のリソース(パス)を作成する
+
+<br>
+
+| リソース名 |
+| ---- |
+| /task |
+| /task/{id} |
+| /task-list |
+
+<br>
+
++ 親ディレクトリのパスを選択したうえで、「リソースを作成」をクリック
+  + 「/task」を作る場合、「/」を選択したうえで、「リソースを作成」をクリック
+  + 「/task/{id} 」を作る場合、「/task-list」を選択したうえで、「リソースを作成」をクリック
+  + 「/task-list」を作る場合、「/」を選択したうえで、「リソースを作成」をクリック
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0a3a8648-554c-4a22-8809-4282c910a4ee" width="70%" />
+
+<br>
+
++ リソース名を入力して、「CORS (クロスオリジンリソース共有)」にチェックを入れて、「リソースを作成」をクリックする
+    + 必ず「CORS (クロスオリジンリソース共有)」にチェックを入れてください！
+    + リソース名の先頭に「/」は不要
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/1f622802-caed-447d-85dd-d0970b506043" width="70%" />
+
+<br>
+<br>
+
++ 上記の手順で、3種類のリソースを作成する
+
+<br>
+
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7f500c56-a5b2-4a98-ba69-2817813bb7e0" width="70%" />
+
+<br>
+
+## 【メソッドの作成】
+
+<br>
+
+下記のメソッドを作成する。
+
+<br>
+
+| メソッド名 | パス | 紐づけるLambda関数 |
+| ---- | ---- | ---- |
+| GET | /task-list | get-task-list-function |
+| POST | /task | post-task-function |
+| PUT |  /task | put-task-function |
+| DELETE | /task/{id} | delete-task-function |
+
+<br>
+<br>
+
++ 作成対象のパスを選択して、「メソッドを作成」をクリック
+  + GETメソッドを作る場合、「/task-list」を選択して、「メソッドを作成」をクリック
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e1eaf962-3796-49f3-b704-f59457a73d93" width="70%" />
+
+<br>
+
++ 下記の内容を入力・選択して、「メソッドを作成」をクリック
+  + メソッドタイプ: 作成するメソッド名を選択
+  + 統合タイプ: Lambda関数
+  + Lambdaプロキシ統合: チェックを入れる！
+  + Lambda関数: 紐づけるLambda関数名を入力 (入力すると自動でARNに変換される)
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7b5fbe58-dddc-40da-8ac1-0d5ef0331564" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/b5c73dec-c9b4-4fcf-a1e9-ff32d38649e7" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/07918b56-37e9-44e2-8ee2-b0c6daead48b" width="70%" />
+
