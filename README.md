@@ -110,7 +110,7 @@
 
 <br><br>
 
-+ IAMの設定
+## 【IAMの設定】
 
 <br>
 
@@ -157,3 +157,38 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/ec56780f-3dac-4530-b8d4-7a589bc9ea8e" width="70%" />
 
 <br>
+<br>
+
+# ③ API Gatewayの作成
+
+<br><br>
+
++ マネジメントコンソールの検索部分に「API Gateway」と入力・検索を行い、API Gatewayサービスを選択する。
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/2efdd326-ac45-4959-b220-7fccbd93a396" width="70%" />
+
+<br>
+
++ API タイプを選択メニューでは、REST APIの「構築」をクリックする
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e1308952-e153-46a6-9cd2-e7a2febaa892" width="70%" />
+
+<br>
+<br>
+
++ 下記の内容を入力して、「APIを作成」をクリックする
+    + 「新しいAPI」を選択
+    + API名: todo (何でもOK)
+    + APIエンドポイントタイプ: リージョン
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/13dfe3cb-de4c-4929-97ae-aad0d5872e20" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/cca1419f-889f-4f35-8fea-c6d99ce85514" width="70%" />
