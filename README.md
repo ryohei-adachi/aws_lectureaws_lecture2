@@ -249,7 +249,18 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7f500c56-a5b2-4a98-ba69-2817813bb7e0" width="70%" />
 
+<br><br>
+
+CORSのチェックを入れ忘れた場合、リソースの「CORSを有効にする」をクリックして、CORS許可の設定を行う。
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c2fbc8f0-6f6e-4803-99b6-96a6d8071b4a" width="70%" />
 <br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/00c6d650-7dc7-4bdd-8a58-dc048e951fa6" width="70%" />
+
+<br><br>
 
 ## 【メソッドの作成】
 
@@ -295,4 +306,59 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 <br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/07918b56-37e9-44e2-8ee2-b0c6daead48b" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/67462e32-7e08-4f89-84ea-67abc4c1d946" width="70%" />
+
+<br>
+<br>
+
+上記の流れで、GET、POST、PUT、DELETEメソッドを作成する。
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6e8132d3-76bc-4f35-ae0e-6d9c2435a76f)" width="70%" />
+
+<br>
+
+## 【/taskのOPTIONSメソッドの修正】
+
+<br>
+
+```
+ブラウザの仕様で、PUTメソッドの通信の場合、プリフライトリクエストにより、通信前の検証を行なっている。
+一方で、API GatewayのCORSの許可設定をすると、OPTIONSメソッドが生成され、統合レスポンスヘッダーのAccess-Contorol-Allow-Methodsに不要なメソッド(今回の場合、HEADやPATCH)が存在する。
+/taskのOPTIONSメソッドのレスポンスヘッダー"Access-Contorol-Allow-Methods"に不要なメソッドが存在すると、
+ブラウザ側で検証エラー(CORS違反)となり、PUTメソッドの通信が上手くいかなくなるらしい。
+※ChromeとMicroEdgeで確認した結果
+```
+
+<br><br>
+
++ /taskのOPRIONSメソッドを選択して、統合レスポンスの編集をクリック
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/32f6e5f2-0ccf-4b84-8ec6-39290352353e" width="70%" />
+
+<br>
+
++ ヘッダーのマッピングのAccess-Control-Allow-Methods項目欄に、下記内容に修正する
+
+<br>
+
+'OPTIONS,POST,GET,PUT,DELETE'
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/75bfd636-ef0d-4ab4-8a43-a187d7f1afa8" width="70%" />
+
++ 「保存」をクリックする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f5597e29-f0c8-463b-82db-5c6e39406aca" width="70%" />
+
+<br><br>
 
