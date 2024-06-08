@@ -374,5 +374,28 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <br><br>
 
++ 「APIをデプロイ」をクリックする
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/45b93fcc-e6bb-45dd-97e3-7fb2ce5c49e5" width="70%" />
+
+<br><br>
+
++ ステージに「新しいステージ」を選択して、ステージ名を入力して、「デプロイ」をクリックする
+  + 本手順ではステージ名を「production」と入力
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/96e9a0a2-8050-4e57-8ae7-34c5483f27b4" width="70%" />
+
+<br>
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7d6cdc5a-b27e-4965-92a2-09458dad3bfc" width="70%" />
+
+<br><br>
+
++ 左メニューのステージを選択して、ステージ上にAPIがデプロイされていることを確認する
+  + ここで、APIのURLが発行される
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e5ecf762-502c-4859-aa8e-e46d4664d8c8" width="70%" />
+
+<br><br><br>
+
 
 
