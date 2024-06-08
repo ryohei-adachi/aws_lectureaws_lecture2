@@ -236,6 +236,9 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
     + リソース名の先頭に「/」は不要
 
 <br>
+<br>
+CORSにチェックを入れると、OPTIONSメソッドが作られる。
+<br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/1f622802-caed-447d-85dd-d0970b506043" width="70%" />
 
@@ -252,6 +255,8 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 <br><br>
 
 CORSのチェックを入れ忘れた場合、リソースの「CORSを有効にする」をクリックして、CORS許可の設定を行う。
+<br>
+※メソッドを作成した後に、「CORSを有効にする」がクリックできるようになる
 
 <br><br>
 
