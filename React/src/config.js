@@ -1,12 +1,12 @@
 const config = {
     //GETメソッドのURLを記載してください。
-    GET_API_URL: "https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task-list",
+    GET_API_URL: "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     //POSTメソッドのURLを記載してください。
-    POST_API_URL: "https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task",
+    POST_API_URL: "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     //DELETEメソッドのURLを記載してください。
-    DELETE_API_URL: "https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task/",
+    DELETE_API_URL: "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     //PUTメソッドのURLを記載してください。
-    PUT_API_URL: "https://f8ihn5u237.execute-api.ap-northeast-1.amazonaws.com/production/task"
+    PUT_API_URL: "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   };
   
   export default config;
