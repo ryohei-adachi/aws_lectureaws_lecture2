@@ -467,6 +467,67 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <br>
 
-<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/5bffc12c-1437-41e5-90c0-17ce93ddddca)" width="70%" />
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/5bffc12c-1437-41e5-90c0-17ce93ddddca" width="70%" />
 
 <br><br>
+
+# ⑥フロントの実装
+
+<br>
+
+フロントではReactを使用する。
+
+<br><br>
+
+## 【node.jsのインストール】
+
+<br>
+
++ 下記サイトにアクセスして、偶数バージョンのnode.jsをダウンロードする。
+  
+※偶数バージョンのnode.jsは長期間サポートしてくれるバージョン(LTSと呼ぶ)
+
+
+https://nodejs.org/ja/download/
+
+<br><br>
+
++ ダウンロードしたexeファイルを実行して、「next」で進んでいき、node.jsをインストールする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/da009876-d3f5-4664-af5f-aeee071ec34f" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/da0361a3-1207-47ca-b4f8-cc30acb791fd" width="70%" />
+
+
+
+## 【Reactプロジェクトの作成】
+
+<br>
+
++ デスクトップ上にフォルダを作成する
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/27978b17-2762-44cd-9821-41cbbe3ecd95" width="70%" />
+
+
+
+<br><br>
+
++ ターミナルを開く (Windowsの人はコマンドプロンプト)
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/92f2730c-894a-4af2-8977-c2f31f2f89da" width="70%" />
+
+<br><br>
+
++ ターミナル上に下記のコマンドを入力する
+
+```
+cd
+cd Desktop/(上記で作成したフォルダ名)
