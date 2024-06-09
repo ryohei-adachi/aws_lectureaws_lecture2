@@ -1,4 +1,4 @@
-![image](https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fa8e9af1-9ed1-458f-b73d-89555a8cdc82)# ① AWS準備
+# ① AWS準備
 
 + AWSマネジメントコンソールにログインする
 
