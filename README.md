@@ -336,6 +336,7 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 ```
 ブラウザの仕様で、PUTメソッドの通信の場合、プリフライトリクエストにより、通信前の検証を行なっている。
+
 一方で、API GatewayのCORSの許可設定をすると、OPTIONSメソッドが生成され、統合レスポンスヘッダーのAccess-Contorol-Allow-Methodsに不要なメソッド(今回の場合、HEADやPATCH)が存在する。
 /taskのOPTIONSメソッドのレスポンスヘッダー"Access-Contorol-Allow-Methods"に不要なメソッドが存在すると、
 ブラウザ側で検証エラー(CORS違反)となり、PUTメソッドの通信が上手くいかなくなるらしい。
@@ -356,11 +357,15 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <br>
 
+```
 'OPTIONS,POST,GET,PUT,DELETE'
+```
 
 <br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/75bfd636-ef0d-4ab4-8a43-a187d7f1afa8" width="70%" />
+
+<br><br>
 
 + 「保存」をクリックする
 
@@ -397,5 +402,48 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <br><br><br>
 
+# ⑤DynamoDBの構築
 
+<br><br>
 
++ マネジメントコンソールの検索部分に「DynamoDB」と入力・検索を行い、DynamoDBサービスを選択する。
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/b776939f-ddc3-49db-8328-c58f6c3f9980" width="70%" />
+
+<br><br>
+
++ 「テーブルの作成」をクリックする
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/590ca91c-d4b1-44e5-bc91-7bc7ff15d2b0" width="70%" />
+
+<br><br>
+
++ 下記の内容を入力する
+  + テーブル名: task-table
+  + パーティションキー: id 数値
+  + ソートキー: 空欄
+  + テーブル設定: 設定をカスタマイズ
+  + テーブルクラス: DynamoDB標準
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/5860ce21-aa1c-4db7-83e0-34f3ffbdd1e7" width="70%" />
+
+<br>
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/271acb86-8d84-4439-b3f4-9d9cf15cd841" width="70%" />
+
+<br>
+<br>
+
++ 「読み込み/書き込みキャパシティーの設定」には下記の項目を入力する
+  + キャパシティーモード: プロビジョンド
+  + Auto Scaling(読み込みキャパシティー)　: OFF
+  + プロビジョンドキャパシティーユニット(読み込みキャパシティー)　: 1
+  + Auto Scaling(書き込みキャパシティー)　: OFF
+  + プロビジョンドキャパシティーユニット(書き込みキャパシティー)　: 1 
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6f39702f-1558-4cf0-9ae4-30cdce151bbd" width="70%" />
+
+<br><br>
