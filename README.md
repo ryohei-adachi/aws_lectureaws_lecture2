@@ -1,4 +1,4 @@
-# ① AWS準備
+![image](https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fa8e9af1-9ed1-458f-b73d-89555a8cdc82)# ① AWS準備
 
 + AWSマネジメントコンソールにログインする
 
@@ -444,6 +444,29 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
   + Auto Scaling(書き込みキャパシティー)　: OFF
   + プロビジョンドキャパシティーユニット(書き込みキャパシティー)　: 1 
 
+<br>
+<br>
+
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6f39702f-1558-4cf0-9ae4-30cdce151bbd" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/09328422-2fd1-42bd-8334-44e1b53519d9" width="70%" />
+
+<br><br>
+
++ 上記以外の設定項目は変更なしで、「テーブルの作成」をクリック
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/69b775e3-b766-4fd7-b801-7709cb99a481" width="70%" />
+
+<br>
+
++ 左のメニューの「テーブル」から「task-table」テーブルが作られていることを確認する 
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/5bffc12c-1437-41e5-90c0-17ce93ddddca)" width="70%" />
 
 <br><br>
