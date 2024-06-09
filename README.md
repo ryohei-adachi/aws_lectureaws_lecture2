@@ -400,6 +400,11 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e5ecf762-502c-4859-aa8e-e46d4664d8c8" width="70%" />
 
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c5eea8b7-fb9c-4b95-9dd7-7723201763c2" width="70%" />
+
+
 <br><br><br>
 
 # ⑤DynamoDBの構築
@@ -616,5 +621,30 @@ npm install axios normalize.css
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fdf5ec15-1810-43cd-a770-8f3920f73c55" width="70%" />
 
+<br><br>
 
++ 置き換えた「src」を開き、「config.js」をVisual Studioで開く
+  + 「config.js」を「control」 + クリック > このアプリケーションで開く > Visual Studioを選択
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/cb9cb6a8-c751-4f93-978f-e907efb89216" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/a7e4fe04-6950-43ff-af57-b279877f8f48" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/07afd724-1799-4ffc-9e80-9997bf9e6e55" width="70%" />
+
+<br>
+
++ AWSのAPI Gatewayサービスを開き、各メソッドのAPIのURLを確認し、「config.js」の「https://XXXXXXXX」の箇所を書き換える
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6c010571-1eb3-45a6-8e4e-1d937ae62707" width="70%" />
+
+<br>
 
