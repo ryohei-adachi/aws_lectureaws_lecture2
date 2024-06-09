@@ -648,3 +648,50 @@ npm install axios normalize.css
 
 <br>
 
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c12477e9-d51b-43c6-80fd-87ff84701262" width="70%" />
+
+<br>
+
+【API接続テスト】
+
+<br>
+
+この時点で、パソコンからAWSへの接続確認ができる。
+
+<br>
+
+下記のコマンドを入力して、TODOアプリを開き、動作確認を行う
+
+<br>
+
+```
+cd
+cd Desktop/(作業用フォルダ名)/(Reactプロジェクト名)
+npm start
+```
+
+<br>
+
+以下のURLにアクセスする
+
+<br>
+
+```
+http://localhost:3000/
+````
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6fbd78bc-fe80-4170-a63e-fc7c609546d8" width="70%" />
+
+<br>
+
+タスクの登録、編集、削除などを行なってみる。
+<br>
+※API通信に遅れが発生して、ブラウザに結果が反映するのが遅れる可能性がある
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/9927e943-51f9-46b3-9608-3e89e5802dff" width="70%" />
+
+<br>
