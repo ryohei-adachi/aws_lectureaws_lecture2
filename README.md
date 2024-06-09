@@ -502,7 +502,50 @@ https://nodejs.org/ja/download/
 
 <img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/da0361a3-1207-47ca-b4f8-cc30acb791fd" width="70%" />
 
+<br><br>
 
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/afaf0753-27f9-4c87-9081-6872d375da10" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/8f9433c7-e290-4009-b6d1-61bfd5ac57af" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/3513c2cd-56fa-4e0d-9eec-d8667f8938cb" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/49429347-318f-4bdf-b893-e87900dc5a17" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/544d2d63-b8f5-4ba6-8a47-27a0e27e34c3" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/chat_app_lecture/assets/75190594/cca226d5-d1cd-4597-8a5b-c89ce0541d7c" width="70%" />
+
+<br><br>
+
++ コマンドプロンプトを開いて、以下コマンドを打ってnode.jsのバージョンが表示されることを確認(Windows)
++ ターミナルを開いて、以下コマンドを打ってnode.jsのバージョンが表示されることを確認(Mac)
+
+
+
+```
+node -v
+```
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/92f2730c-894a-4af2-8977-c2f31f2f89da" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/2672b5bd-c276-4c52-9734-036b12d385cb" width="70%" />
+
+<br><br>
 
 ## 【Reactプロジェクトの作成】
 
@@ -514,11 +557,9 @@ https://nodejs.org/ja/download/
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/27978b17-2762-44cd-9821-41cbbe3ecd95" width="70%" />
 
-
-
 <br><br>
 
-+ ターミナルを開く (Windowsの人はコマンドプロンプト)
++ 再度ターミナルを開く (Windowsの人はコマンドプロンプト)
 
 <br><br>
 
@@ -528,6 +569,36 @@ https://nodejs.org/ja/download/
 
 + ターミナル上に下記のコマンドを入力する
 
+<br>
+
 ```
 cd
 cd Desktop/(上記で作成したフォルダ名)
+npx create-react-app (プロジェクト名)
+cd (プロジェクト名)
+```
+※(プロジェクト名)は好きな名前を入力
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6f1fbb2c-a1ca-4e73-81e9-a36775e68777" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/51e49b5f-9096-414c-aeaf-5ba703144afc" width="70%" />
+
++ さらに下記のコマンドを入力して、必要なライブラリ(プログラムの部品)をインストールする
+
+<br>
+
+```
+npm install axios normalize.css
+```
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/25130c90-aac2-47a8-8b8e-480a5e03f52d" width="70%" />
+
+<br><br>
+
+
