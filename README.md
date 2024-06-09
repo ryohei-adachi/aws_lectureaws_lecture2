@@ -601,4 +601,20 @@ npm install axios normalize.css
 
 <br><br>
 
++ 作成したプロジェクトフォルダ内の「src」を本GitHubリポジトリからダウンロードした「React/src」フォルダに置き換える
+
+▽GitHubからダウンロードしたReact/srcプロジェクト
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f9139a61-b46b-43c9-bf54-4ef4a4578fbb" width="70%" />
+
+<br>
+
+▽作成プロジェクトの「src」フォルダをダウンロードした「React/src」フォルダに置き換える
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/ea822153-5af5-4b8a-b675-fd3888fac6cb" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fdf5ec15-1810-43cd-a770-8f3920f73c55" width="70%" />
+
+
 
