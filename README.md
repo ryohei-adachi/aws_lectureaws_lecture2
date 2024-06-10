@@ -556,7 +556,7 @@ node -v
 
 <br>
 
-+ デスクトップ上にフォルダを作成する
++ デスクトップ上に作業用フォルダを作成する
 
 <br>
 
@@ -578,11 +578,11 @@ node -v
 
 ```
 cd
-cd Desktop/(上記で作成したフォルダ名)
-npx create-react-app (プロジェクト名)
-cd (プロジェクト名)
+cd Desktop/(作業用フォルダ名)
+npx create-react-app (Reactプロジェクト名)
+cd (Reactプロジェクト名)
 ```
-※(プロジェクト名)は好きな名前を入力
+※(Reactプロジェクト名)は好きな名前を入力
 
 <br><br>
 
@@ -652,7 +652,7 @@ npm install axios normalize.css
 
 <br>
 
-【API接続テスト】
+## 【API接続テスト】
 
 <br>
 
@@ -693,5 +693,91 @@ http://localhost:3000/
 <br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/9927e943-51f9-46b3-9608-3e89e5802dff" width="70%" />
+
+<br>
+<br>
+
+## 【Reactのビルド】
+
+<br>
+
++ 下記のコマンドを実行して、React全体をビルドする
+  + ビルドとは、人間が読めるソースコードから機械(パソコン・サーバ)が実行可能な状態に変換すること
+
+<br>
+
+```
+cd
+cd Desktop/(作業用フォルダ名)/(Reactプロジェクト名)
+npm run build
+```
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/143cceea-72f1-409e-a9ae-e27f36b9d7b5" width="70%" />
+
+<br>
+
+▽ビルド完了
+<br>
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0aef5d85-a91d-4775-8e2e-ff140930548b" width="70%" />
+<br>
+
++ Reactプロジェクトフォルダ内に「bin」というフォルダが作成されていることを確認する
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/629bd194-17c2-439a-9d68-254aa31b5d1f" width="70%" />
+
+<br>
+<br>
+
+# ⑦ホスティングサーバの設定
+
+<br>
+
+Amazon S3の静的ホスティングサービスを使って、TODOアプリを公開する。
+
+<br><br>
+
++ マネジメントコンソールの検索部分に「S3」と入力・検索を行い、S3サービスを選択する。
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f12186eb-be0b-4460-8c98-ac2ab80b7d2a" width="70%" />
+
+<br>
+
++ S3トップ画面の「バケットの作成」をクリックする
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0fc09c94-edbb-494f-9b1f-865ec0784724" width="70%" />
+
+<br>
+
++ 下記の項目の入力を行う
+  + バケット名: (好きな名前) ※但し、世界中の全AWSユーザ間で唯一(一意)の名前にしないといけない
+  + パブリックアクセスをすべてブロックのチェックを外す
+  + 現在の設定により、このバケットとバケット内のオブジェクトが公開される可能性があることを承認します。にチェックを入れる
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/68f0cf77-5fdc-4f0c-b30f-13afe7707195" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f46a6745-6d91-4101-8711-b77bfd3e4586" width="70%" />
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/abed2e67-9b69-4fd3-af1e-c50863840f2a" width="70%" />
+
+<br>
+上記以外の項目は、変更なしで、「バケットの作成」をクリックする
+
+<br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0f5bcebb-a4cc-428c-8883-d505a1a232f2" width="70%" />
 
 <br>
