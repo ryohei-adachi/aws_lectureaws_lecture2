@@ -927,6 +927,8 @@ Amazon S3の静的ホスティングサービスを使って、TODOアプリを�
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/d0940feb-8cc5-466c-85b2-c0d0c48cd9d0" width="70%" />
 
+<br><br>
+
 ```
 http://(バケット名).s3-website-ap-northeast-1.amazonaws.com
 ```
