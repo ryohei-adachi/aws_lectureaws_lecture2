@@ -754,32 +754,195 @@ Amazon S3の静的ホスティングサービスを使って、TODOアプリを�
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0fc09c94-edbb-494f-9b1f-865ec0784724" width="70%" />
 
-<br>
+<br><br>
 
 + 下記の項目の入力を行う
   + バケット名: (好きな名前) ※但し、世界中の全AWSユーザ間で唯一(一意)の名前にしないといけない
   + パブリックアクセスをすべてブロックのチェックを外す
   + 現在の設定により、このバケットとバケット内のオブジェクトが公開される可能性があることを承認します。にチェックを入れる
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/68f0cf77-5fdc-4f0c-b30f-13afe7707195" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f46a6745-6d91-4101-8711-b77bfd3e4586" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/abed2e67-9b69-4fd3-af1e-c50863840f2a" width="70%" />
 
-<br>
+<br><br>
 上記以外の項目は、変更なしで、「バケットの作成」をクリックする
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0f5bcebb-a4cc-428c-8883-d505a1a232f2" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f62b5885-ae68-41c0-b00e-c4188d4c91ce" width="70%" />
+
+<br><br>
+
++ 作成したバケットを選択して、「プロパティ」を選択する
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e300f69a-53cb-445c-ae84-78195ed80a3d" width="70%" />
+
+<br><br>
+
++ 一番下にある「静的ウェブサイトホスティング」の編集ボタンをクリックする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/3b211eb9-8fb9-48dd-a91b-3bb2df5b2136" width="70%" />
+
+<br><br>
+
++ 「静的ウェブサイトホスティングを編集」において、静的ウェブサイトホスティングを「有効」にする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/31e09796-5917-4b20-bcfe-4ec587c09fbf" width="70%" />
+
+<br><br>
+
++ インデックスドキュメントに「index.html」と入力する
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/bc49c7c5-4827-4676-87f7-9524a61d4d1c" width="70%" />
+
+<br><br>
+
++ 「変更の保存」をクリックする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/54c4c4c4-f213-487c-9c2f-457756909613" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7da1b415-dd08-4a90-9186-a5251d812e0c" width="70%" />
+
+<br><br>
+
++ 作成したバケットの「アクセス許可」の設定を選択する
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f854471f-20a2-473c-9323-4ce11da08b23" width="70%" />
+
+<br><br>
+
++ 「バケットポリシー」の「編集」をクリック
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/62800372-5cef-4bae-a325-d77025d63121" width="70%" />
+
+<br><br>
+
++ バケットポリシーの「ポリシー」に下記の内容を入力する
+  
+<br><br>
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::(バケット名)/*"
+        }
+    ]
+}
+```
+
+<br>
+
+※(バケット名)には作成したバケット名を入力する
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c60d31ff-03b6-4f71-bde0-57802d1e34f8" width="70%" />
+
+<br><br>
+
++ ポリシーの記載が完了したら、「変更の保存」をクリックする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c4da764c-ddd5-4a49-9b91-7127db407dfd" width="70%" />
+
+<br><br>
+
++ バケットの「オブジェクト」タブを開く
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/3a6cba3f-3bb2-46f6-a3f4-5067c45d887f" width="70%" />
+
+<br><br>
+
++ Reactプロジェクトをビルドして生成された「bin」フォルダ配下の全ファイルをS3にアップロードする
+    +　ドラッグ&ドロップでアップロードできる
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/ed303888-be52-4f9e-9efe-cfeff9c32941" width="70%" />
+
+<br><br>
+
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6bc9eeda-62a4-49aa-870c-e5834352ab1a" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7a0292d8-8897-4948-b5c1-851ca7ddf35b" width="70%" />
+
+<br><br>
+
++ 「アップロード」をクリックする
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/de0d6d87-4a4c-41e0-a1d3-4fb9316f3b00" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6e50251e-2d96-48f6-853a-cb48b81a24e7" width="70%" />
+
+<br><br>
+
++ 再びバケットの「プロパティ」タブを開き、「静的ウェブホスティング」のバケットウェブサイトエンドポイントURLを確認する
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/d0940feb-8cc5-466c-85b2-c0d0c48cd9d0" width="70%" />
+
+```
+http://(バケット名).s3-website-ap-northeast-1.amazonaws.com
+```
+
+<br><br>
+
++ エンドポイントURLを開くと、TODOアプリが開くことを確認する
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f8325120-49f1-410f-a914-1b1752bf453b" width="70%" />
+
+<br><br>
+
+<img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/d84ea3d6-3210-4c27-ae56-a73fed5af01b" width="70%" />
+
+<br><br>
+
+以上、TODOアプリをインターネットに公開することができた。
