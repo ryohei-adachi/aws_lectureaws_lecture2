@@ -2,6 +2,8 @@
 
 + AWSマネジメントコンソールにログインする
 
+<br><br>
+
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/185df00f-2d8a-482a-a2a0-c0d1ca022a29" width="70%" />
 
 <br><br>
@@ -9,7 +11,7 @@
 + AWSのマジメントコンソールを開き、リージョンを選択する
     + 本手順書では、「東京」リージョンに選択したうえで進めます。
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6bbebbb5-c1ad-4e30-8e17-52fc83e0d91c" width="70%" />
 
@@ -18,7 +20,7 @@
 + 本GitHubプロジェクトファイル一式をダウンロードする
     + 「<>Code」⇒ 「Download Zip」ボタンをクリックするとダウンロードできる
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fa12faa6-b5ae-499d-b383-d3c61c8e392a" width="70%" />
 
@@ -33,7 +35,7 @@
 
 + 下記の関数を作成する
 
-<br>
+<br><br>
   
 | 関数名 | 役割 | ランタイム設定 | 
 | ---- | ---- | ---- | 
@@ -42,37 +44,37 @@
 | put-task-function | 指定したTODOタスクの内容を変更する | Python 3.8 |
 | delete-task-function | 指定したTODOタスクをDynamoDBから削除する | Python 3.8 |
 
-<br>
+<br><br>
 
 ## 【関数の作成の仕方】
 
-<br>
+<br><br>
 
 + 「関数の作成」ボタンを押す
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/de981108-0c58-4a9f-a9e7-5f177e31dfd7" width="70%" />
 
-<br>
+<br><br>
 
 + 「一から作成」、関数名には上記表の関数名、ランタイム設定には「Python3.8」を選択
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/bf4cb06d-dc68-4e71-a1a1-fe219bc4c2a9" width="70%" />
 
-<br>
+<br><br>
 
 + 入力後、「関数の作成」をクリック
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0a5d283a-bbb1-4884-9105-35ba3778b90c" width="70%" />
 
-<br>
+<br><br>
 
 上記手順で、関数4つ分作成する。
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/36209267-d737-4161-aa29-a1ff90b69f44" width="70%" />
 
-<br>
+<br><br>
 
 ## 【Lambdaコードの書き換え】
 
@@ -86,7 +88,7 @@
     + put-task-function関数の場合、「AWS/Lambda/put-task-function.py」の内容に書き換える
     + delete-task-function関数の場合、「AWS/Lambda/delete-task-function.py」の内容に書き換える
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/83a4538a-7e0a-44aa-a41e-96b64b39ea10" width="70%" />
 
@@ -95,7 +97,7 @@
 + コードの書き換え後、コードの保存をする
     + 「File」 ⇒ 「Save」を選択する
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/a74610ab-c17c-4192-a3ae-c2784120e777" width="70%" />
 
@@ -104,7 +106,7 @@
 + デプロイを行う
     + 「Deploy」ボタンを押す
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/98630b9a-b645-4714-9939-a70adc69e8ca" width="70%" />
 
@@ -112,17 +114,17 @@
 
 ## 【IAMの設定】
 
-<br>
+<br><br>
 
 Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込みを行う。
 
 そのため、Lambdaに対して、DynamoDBへのアクセス権限を付与する。
 
-<br>
+<br><br>
 
 + Lambdaの「設定」タブ > 「一般設定」 > 「編集」ボタンをクリックする
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/44012845-0ff9-468b-9615-09cc57a78770" width="70%" />
 
@@ -165,15 +167,15 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 
 + マネジメントコンソールの検索部分に「API Gateway」と入力・検索を行い、API Gatewayサービスを選択する。
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/2efdd326-ac45-4959-b220-7fccbd93a396" width="70%" />
 
-<br>
+<br><br>
 
 + API タイプを選択メニューでは、REST APIの「構築」をクリックする
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e1308952-e153-46a6-9cd2-e7a2febaa892" width="70%" />
 
@@ -185,32 +187,32 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
     + API名: todo (何でもOK)
     + APIエンドポイントタイプ: リージョン
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/13dfe3cb-de4c-4929-97ae-aad0d5872e20" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/cca1419f-889f-4f35-8fea-c6d99ce85514" width="70%" />
 
 <br><br>
 ここから、リソースパス、メソッドを作成していく。
-<br>
+<br><br>
 
 ▼完成した形
 <br>
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6da1ccd3-7db7-4e0e-afba-a944458209a6" width="70%" />
 
-<br>
+<br><br>
 
 
 ## 【リソースの作成】
 
-<br>
+<br><br>
 
 下記のリソース(パス)を作成する
 
-<br>
+<br><br>
 
 | リソース名 |
 | ---- |
@@ -218,18 +220,18 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 | /task/{id} |
 | /task-list |
 
-<br>
+<br><br>
 
 + 親ディレクトリのパスを選択したうえで、「リソースを作成」をクリック
   + 「/task」を作る場合、「/」を選択したうえで、「リソースを作成」をクリック
   + 「/task/{id} 」を作る場合、「/task-list」を選択したうえで、「リソースを作成」をクリック
   + 「/task-list」を作る場合、「/」を選択したうえで、「リソースを作成」をクリック
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0a3a8648-554c-4a22-8809-4282c910a4ee" width="70%" />
 
-<br>
+<br><br>
 
 + リソース名を入力して、「CORS (クロスオリジンリソース共有)」にチェックを入れて、「リソースを作成」をクリックする
     + 必ず「CORS (クロスオリジンリソース共有)」にチェックを入れてください！
@@ -247,7 +249,7 @@ Lambdaは、DynamoDBにアクセスして、データの読み込み/書き込�
 
 + 上記の手順で、3種類のリソースを作成する
 
-<br>
+<br><br>
 
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7f500c56-a5b2-4a98-ba69-2817813bb7e0" width="70%" />
@@ -258,13 +260,13 @@ CORSにチェックを入れると、OPTIONSメソッドが作られる。
 <br><br>
 
 CORSのチェックを入れ忘れた場合、リソースの「CORSを有効にする」をクリックして、CORS許可の設定を行う。
-<br>
+<br><br>
 ※メソッドを作成した後に、「CORSを有効にする」がクリックできるようになる
 
 <br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c2fbc8f0-6f6e-4803-99b6-96a6d8071b4a" width="70%" />
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/00c6d650-7dc7-4bdd-8a58-dc048e951fa6" width="70%" />
 
@@ -272,11 +274,11 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 ## 【メソッドの作成】
 
-<br>
+<br><br>
 
 下記のメソッドを作成する。
 
-<br>
+<br><br>
 
 | メソッド名 | パス | 紐づけるLambda関数 |
 | ---- | ---- | ---- |
@@ -291,11 +293,11 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 + 作成対象のパスを選択して、「メソッドを作成」をクリック
   + GETメソッドを作る場合、「/task-list」を選択して、「メソッドを作成」をクリック
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/e1eaf962-3796-49f3-b704-f59457a73d93" width="70%" />
 
-<br>
+<br><br>
 
 + 下記の内容を入力・選択して、「メソッドを作成」をクリック
   + メソッドタイプ: 作成するメソッド名を選択
@@ -303,19 +305,19 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
   + Lambdaプロキシ統合: チェックを入れる！
   + Lambda関数: 紐づけるLambda関数名を入力 (入力すると自動でARNに変換される)
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/7b5fbe58-dddc-40da-8ac1-0d5ef0331564" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/b5c73dec-c9b4-4fcf-a1e9-ff32d38649e7" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/07918b56-37e9-44e2-8ee2-b0c6daead48b" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/67462e32-7e08-4f89-84ea-67abc4c1d946" width="70%" />
 
@@ -324,15 +326,15 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 上記の流れで、GET、POST、PUT、DELETEメソッドを作成する。
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6e8132d3-76bc-4f35-ae0e-6d9c2435a76f)" width="70%" />
 
-<br>
+<br><br>
 
 ## 【/taskのOPTIONSメソッドの修正】
 
-<br>
+<br><br>
 
 ```
 ブラウザの仕様で、PUTメソッドの通信の場合、プリフライトリクエストにより、通信前の検証を行なっている。
@@ -347,15 +349,15 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 + /taskのOPRIONSメソッドを選択して、統合レスポンスの編集をクリック
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/32f6e5f2-0ccf-4b84-8ec6-39290352353e" width="70%" />
 
-<br>
+<br><br>
 
 + ヘッダーのマッピングのAccess-Control-Allow-Methods項目欄に、下記内容に修正する
 
-<br>
+<br><br>
 
 ```
 'OPTIONS,POST,GET,PUT,DELETE'
@@ -407,7 +409,7 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <br><br><br>
 
-# ⑤DynamoDBの構築
+# ④DynamoDBの構築
 
 <br><br>
 
@@ -421,7 +423,7 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 + 「テーブルの作成」をクリックする
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/590ca91c-d4b1-44e5-bc91-7bc7ff15d2b0" width="70%" />
 
@@ -454,7 +456,7 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6f39702f-1558-4cf0-9ae4-30cdce151bbd" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/09328422-2fd1-42bd-8334-44e1b53519d9" width="70%" />
 
@@ -462,23 +464,23 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 + 上記以外の設定項目は変更なしで、「テーブルの作成」をクリック
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/69b775e3-b766-4fd7-b801-7709cb99a481" width="70%" />
 
-<br>
+<br><br>
 
 + 左のメニューの「テーブル」から「task-table」テーブルが作られていることを確認する 
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/5bffc12c-1437-41e5-90c0-17ce93ddddca" width="70%" />
 
 <br><br>
 
-# ⑥フロントの実装
+# ⑤フロントの実装
 
-<br>
+<br><br>
 
 フロントではReactを使用する。
 
@@ -486,7 +488,7 @@ CORSのチェックを入れ忘れた場合、リソースの「CORSを有効に
 
 ## 【node.jsのインストール】
 
-<br>
+<br><br>
 
 + 下記サイトにアクセスして、偶数バージョンのnode.jsをダウンロードする。
   
@@ -536,7 +538,7 @@ https://nodejs.org/ja/download/
 + コマンドプロンプトを開いて、以下コマンドを打ってnode.jsのバージョンが表示されることを確認(Windows)
 + ターミナルを開いて、以下コマンドを打ってnode.jsのバージョンが表示されることを確認(Mac)
 
-
+<br><br>
 
 ```
 node -v
@@ -554,11 +556,11 @@ node -v
 
 ## 【Reactプロジェクトの作成】
 
-<br>
+<br><br>
 
 + デスクトップ上に作業用フォルダを作成する
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/27978b17-2762-44cd-9821-41cbbe3ecd95" width="70%" />
 
@@ -574,7 +576,7 @@ node -v
 
 + ターミナル上に下記のコマンドを入力する
 
-<br>
+<br><br>
 
 ```
 cd
@@ -588,19 +590,19 @@ cd (Reactプロジェクト名)
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6f1fbb2c-a1ca-4e73-81e9-a36775e68777" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/51e49b5f-9096-414c-aeaf-5ba703144afc" width="70%" />
 
 + さらに下記のコマンドを入力して、必要なライブラリ(プログラムの部品)をインストールする
 
-<br>
+<br><br>
 
 ```
 npm install axios normalize.css
 ```
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/25130c90-aac2-47a8-8b8e-480a5e03f52d" width="70%" />
 
@@ -612,12 +614,12 @@ npm install axios normalize.css
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f9139a61-b46b-43c9-bf54-4ef4a4578fbb" width="70%" />
 
-<br>
+<br><br>
 
 ▽作成プロジェクトの「src」フォルダをダウンロードした「React/src」フォルダに置き換える
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/ea822153-5af5-4b8a-b675-fd3888fac6cb" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/fdf5ec15-1810-43cd-a770-8f3920f73c55" width="70%" />
 
@@ -626,43 +628,43 @@ npm install axios normalize.css
 + 置き換えた「src」を開き、「config.js」をVisual Studioで開く
   + 「config.js」を「control」 + クリック > このアプリケーションで開く > Visual Studioを選択
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/cb9cb6a8-c751-4f93-978f-e907efb89216" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/a7e4fe04-6950-43ff-af57-b279877f8f48" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/07afd724-1799-4ffc-9e80-9997bf9e6e55" width="70%" />
 
-<br>
+<br><br>
 
 + AWSのAPI Gatewayサービスを開き、各メソッドのAPIのURLを確認し、「config.js」の「https://XXXXXXXX」の箇所を書き換える
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6c010571-1eb3-45a6-8e4e-1d937ae62707" width="70%" />
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c12477e9-d51b-43c6-80fd-87ff84701262" width="70%" />
 
-<br>
+<br><br>
 
 ## 【API接続テスト】
 
-<br>
+<br><br>
 
 この時点で、パソコンからAWSへの接続確認ができる。
 
-<br>
+<br><br>
 
 下記のコマンドを入力して、TODOアプリを開き、動作確認を行う
 
-<br>
+<br><br>
 
 ```
 cd
@@ -670,27 +672,27 @@ cd Desktop/(作業用フォルダ名)/(Reactプロジェクト名)
 npm start
 ```
 
-<br>
+<br><br>
 
 以下のURLにアクセスする
 
-<br>
+<br><br>
 
 ```
 http://localhost:3000/
 ````
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/6fbd78bc-fe80-4170-a63e-fc7c609546d8" width="70%" />
 
-<br>
+<br><br>
 
 タスクの登録、編集、削除などを行なってみる。
-<br>
+<br><br>
 ※API通信に遅れが発生して、ブラウザに結果が反映するのが遅れる可能性がある
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/9927e943-51f9-46b3-9608-3e89e5802dff" width="70%" />
 
@@ -699,12 +701,12 @@ http://localhost:3000/
 
 ## 【Reactのビルド】
 
-<br>
+<br><br>
 
 + 下記のコマンドを実行して、React全体をビルドする
   + ビルドとは、人間が読めるソースコードから機械(パソコン・サーバ)が実行可能な状態に変換すること
 
-<br>
+<br><br>
 
 ```
 cd
@@ -712,29 +714,31 @@ cd Desktop/(作業用フォルダ名)/(Reactプロジェクト名)
 npm run build
 ```
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/143cceea-72f1-409e-a9ae-e27f36b9d7b5" width="70%" />
 
-<br>
+<br><br>
 
 ▽ビルド完了
-<br>
+
+<br><br>
+
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0aef5d85-a91d-4775-8e2e-ff140930548b" width="70%" />
-<br>
+<br><br>
 
 + Reactプロジェクトフォルダ内に「bin」というフォルダが作成されていることを確認する
 
-<br>
+<br>><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/629bd194-17c2-439a-9d68-254aa31b5d1f" width="70%" />
 
 <br>
 <br>
 
-# ⑦ホスティングサーバの設定
+# ⑥ホスティングサーバの設定
 
-<br>
+<br>><br>
 
 Amazon S3の静的ホスティングサービスを使って、TODOアプリを公開する。
 
@@ -742,15 +746,15 @@ Amazon S3の静的ホスティングサービスを使って、TODOアプリを�
 
 + マネジメントコンソールの検索部分に「S3」と入力・検索を行い、S3サービスを選択する。
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/f12186eb-be0b-4460-8c98-ac2ab80b7d2a" width="70%" />
 
-<br>
+<br><br>
 
 + S3トップ画面の「バケットの作成」をクリックする
 
-<br>
+<br><br>
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/0fc09c94-edbb-494f-9b1f-865ec0784724" width="70%" />
 
@@ -865,7 +869,7 @@ Amazon S3の静的ホスティングサービスを使って、TODOアプリを�
 }
 ```
 
-<br>
+<br><br>
 
 ※(バケット名)には作成したバケット名を入力する
 
