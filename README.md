@@ -39,10 +39,10 @@
   
 | 関数名 | 役割 | ランタイム設定 | 
 | ---- | ---- | ---- | 
-| get-task-list-function |  TODOタスク一覧をDynamoDBから取得する | Python 3.8 |
-| post-task-function | TODOタスクをDynamoDBに登録する | Python 3.8 |
-| put-task-function | 指定したTODOタスクの内容を変更する | Python 3.8 |
-| delete-task-function | 指定したTODOタスクをDynamoDBから削除する | Python 3.8 |
+| get-task-list-function |  TODOタスク一覧をDynamoDBから取得する | Python 3.8以上 |
+| post-task-function | TODOタスクをDynamoDBに登録する | Python 3.8以上 |
+| put-task-function | 指定したTODOタスクの内容を変更する | Python 3.8以上 |
+| delete-task-function | 指定したTODOタスクをDynamoDBから削除する | Python 3.8以上 |
 
 <br><br>
 
