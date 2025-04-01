@@ -656,7 +656,13 @@ npm install axios normalize.css
 
 <img src="https://github.com/ryohei-adachi/aws_lectureaws_lecture2/assets/75190594/c12477e9-d51b-43c6-80fd-87ff84701262" width="70%" />
 
+<br>
+
+DELETEについては、「https://XXXXXXXX.execute-api.ap-northeast-1.amazonaws.com/production/task」というように、{id}を付与しない。
+
 <br><br>
+
+
 
 ## 【API接続テスト】
 
